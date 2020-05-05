@@ -8,36 +8,36 @@ namespace MAVN.Numerics.Tests
     [TestClass]
     public class Money18ConversionTests
     {
-        [TestMethod]
-        public void Money_Should_Be_Serializable_To_Json()
-        {
-            JsonConvert
-                .SerializeObject(Money18.Create(10, 5))
-                .Should()
-                .Be("\"10.000000000000000000\"");
-        }
+        //[TestMethod]
+        //public void Money_Should_Be_Serializable_To_Json()
+        //{
+        //    JsonConvert
+        //        .SerializeObject(Money18.Create(10, 5))
+        //        .Should()
+        //        .Be("\"10.000000000000000000\"");
+        //}
         
-        [TestMethod]
-        public void Nullable_Money_Should_Be_Serializable_To_Json()
-        {
-            // ReSharper disable once JoinDeclarationAndInitializer
-            Money18? value;
-
-            value = Money18.Create(10, 5);
-            
-            JsonConvert
-                .SerializeObject(value)
-                .Should()
-                .Be("\"10.000000000000000000\"");
-
-            value = null;
-            
-            JsonConvert
-                // ReSharper disable once ExpressionIsAlwaysNull
-                .SerializeObject(value)
-                .Should()
-                .Be("null");
-        }
+        //[TestMethod]
+        //public void Nullable_Money_Should_Be_Serializable_To_Json()
+        //{
+        //    // ReSharper disable once JoinDeclarationAndInitializer
+        //    Money18? value;
+        //
+        //    value = Money18.Create(10, 5);
+        //    
+        //    JsonConvert
+        //        .SerializeObject(value)
+        //        .Should()
+        //        .Be("\"10.000000000000000000\"");
+        //
+        //    value = null;
+        //    
+        //    JsonConvert
+        //        // ReSharper disable once ExpressionIsAlwaysNull
+        //        .SerializeObject(value)
+        //        .Should()
+        //        .Be("null");
+        //}
         
         [TestMethod]
         public void Money_Should_Be_Deserializable_From_Json()
